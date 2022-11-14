@@ -1,23 +1,32 @@
-import React from 'react'
+import {useState, useEffect} from 'react'
+import BlogList from './BlogList';
 
-const Home = () => {
+const Home = () =>{
 
-    const handleClick=(e)=>{
-        console.log('handle, wins', e);
-    }
-    const handleClickAgain =(name, e)=>{
-        console.log('hello' + name, e.target);
-    }
-  return (
-    <div className='home'>
-        <h2>HomePage</h2>
-        <button onClick={handleClick}>Click Me</button>
-        <button onClick={(e)=> handleClickAgain(' marion ', e)}> Click Again</button>
+const [blogs, setBlogs] = useState(null);
+    const [isPending, setIsPending]= useState(true)
+     
 
+    useEffect(() =>{
+    setTimeout(()=>{
+        fetch('http://localhost:8000/blogs')
+    .then(res =>{
+        return res.json();
+    })
+    .then(data =>{
+       console.log(data) 
+       setBlogs(data)
+       setIsPending(false)
+    })
+    },1000)
+},[])
 
-    </div>
+return(
+    <div className="home">
+        {isPending && <div>Loading...</div>}
+   { blogs && <BlogList blogs={blogs}  title="All Blogs!" /> } 
     
-  );
-}
-
-export default Home
+    </div>
+)
+};
+export default Home;

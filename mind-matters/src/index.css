@@ -3,7 +3,7 @@
   margin: 0;
   font-family: 'Quicksand', sans-serif;
 font-family: 'Urbanist', sans-serif;
-color: rgb(0, 0, 0);
+color: rgb(204, 3, 3);
 }
 .navbar{
   padding: 20px;
@@ -11,7 +11,7 @@ color: rgb(0, 0, 0);
   align-items: center;
   max-width: 600px;
   margin: 0 auto;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid rgb(16, 210, 68);
 }
 .navbar h1{
   color: rgb(36, 12, 214);
@@ -31,4 +31,19 @@ color: rgb(0, 0, 0);
   max-width: 600px;
   margin: 40px auto;
   padding: 20px;
+}
+/* blog-preview list*/
+.blog-preview {
+  padding: 10px 16px;
+  margin: 20px 0;
+  border-bottom: 1px solid rgb(211, 204, 210);
+  color: black;
+}
+.blog-preview:hover{
+  box-shadow: 1px 2.5px 5px rgba(0 0 0 0.5);
+}
+.font-preview h2{
+  font-size: 20px;
+  color: rgba(105, 7, 7, 0.955);
+  margin-bottom: 8px;
 }

@@ -1,0 +1,18 @@
+{
+    "blogs":[
+        {
+            "tittle": "My first blog",
+            "body": "the idea of this project it to learn coding.",
+            "author": "larry",
+            "id": 1
+
+        },
+        {
+            "tittle": "All about us",
+            "body": "the idea of this project is how to work in an agile way.",
+            "author": "marion",
+            "id": 2
+
+        }
+    ]
+}

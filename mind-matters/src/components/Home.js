@@ -9,7 +9,7 @@ const [blogs, setBlogs] = useState(null);
    
     useEffect(() =>{
         setTimeout(()=>{
-            fetch('http://localhost:8000/blogsk')
+            fetch('http://localhost:8000/blogs')
                 .then(res =>{
                     if(!res.ok)
                     throw Error('could not fetch the data from the resource')
@@ -20,8 +20,10 @@ const [blogs, setBlogs] = useState(null);
                 .then(data =>{
                      setBlogs(data)
                     setIsPending(false)
+                    setError(null)
     })
     .catch(err=>{
+        setIsPending(false)
         setError(err.message)
     })
         },1000)

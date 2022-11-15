@@ -2,17 +2,17 @@ const Form = () => {
     return (
         <div>
             <form>
-                First Name:
+                <label>First Name:</label>
                 <input type="text" name="fname" />
-                Last Name:
+                <label>Last Name:</label>
                 <input type="text" name="lname"/>
                 <br/>
-                Age:
+                <label>Age:</label>
                 <input type="number" name="age" maxLength="2" />
                 <br/>
-                Address:
+                <label>Address:</label>
                 <br/>
-                Description:
+                <label>Description:</label>
                 <br/>
                 <textarea rows="10" cols="30" name="comment"></textarea>
                 <br/>

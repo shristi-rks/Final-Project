@@ -1,29 +1,30 @@
+import React from 'react';
 import { useForm } from 'react-hook-form'
+import './Login.css'
 
-const LogInForm = () => {
+export function LogInForm() {
     const { register, handleSubmit } = useForm()
     const onSubmit = data => console.log(data);
     return (
             <section>
                 <div className="login">
-                    <div className="col-1">
+                    <div className="div">
                         <h2>Sign In</h2>
-                        <span>register and enjoy the service</span>
+                        <br />
+                        <br />
+                    </div>
         
-                        <form id='form' className='flex flex-col' onSubmit={handleSubmit(onSubmit)}>
-                            <input type="text" {...register("username")} placeholder='username' />
+                        <form id='form'  onSubmit={handleSubmit(onSubmit)}>
+                            <input type="text" {...register("username")} placeholder='username/nickname' />
+                            <br />
+                            <br />
                             <input type="text" {...register("password")} placeholder='password' />
-                            <input type="text" {...register("confirmpwd")} placeholder='confirm password' />
-                            <input type="text" {...register("mobile", { required : true, maxLength: 10 })} placeholder='mobile number' />
+                            <br />
+                            <br />
                             <button className='btn'>Sign In</button>
                         </form>
-        
-                    </div>
-                    <div className="col-2">
-    
-                    </div>
+
                 </div>
             </section>
     )
 }
-export default LogInForm;

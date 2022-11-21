@@ -1,10 +1,16 @@
-function Header() {
+import React from "react";
+import { Link } from 'react-router-dom';
+
+const Header = () => {
     return(
-        <nav>
+        
             <div>
-                <h3>Registration</h3>
+                <Link to="/LogInForm">
+                <h3>Login/SignUp</h3>
+                </Link>
+
             </div>
-        </nav>
+       
     )
 }
 export default Header;

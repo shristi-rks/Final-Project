@@ -1,14 +1,9 @@
-import Header from './components/Header';
-import LogInForm from './components/LogInForm';
-import './App.css';
-
+import React from 'react';
+import Display from './components/Display';
 function App() {
   return (
     <div className="App">
-      <Header className="App-header" />
-      <div>
-        <LogInForm />
-      </div>
+      <Display />
     </div>
   );
 }

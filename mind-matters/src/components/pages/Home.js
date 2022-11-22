@@ -1,11 +1,13 @@
-
+import Display from '../Display'
 
 
 import React from 'react'
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <div>
+      <Display/>
+    </div>
   )
 }
 

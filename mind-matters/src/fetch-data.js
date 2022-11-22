@@ -18,12 +18,12 @@ query LookHelperData {
   } 
 `;
 
-export const fetchComments = async () => {
-    const reponse = await fetch (ENDPOINT_URL, {
+export const fetch = async () => {
+    const response = await fetch (ENDPOINT_URL, {
         METHOD: "POST",
         body: JSON.stringify ( {
             query: COMMENTS_QUERY
         })
     });
-    return await Response.json();
+    return await response.json();
   }

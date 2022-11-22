@@ -1,6 +1,6 @@
 const ENDPOINT_URL = "https://intimate-zebra-90.hasura.app/v1/graphql";
-const COMMENTS_QUERY = 
-query LookHelperData {
+const COMMENTS_QUERY = `
+query LookHelperData { 
     helper_data {
       id,
       first_name,
@@ -15,8 +15,8 @@ query LookHelperData {
       price,
       image
     }
-  }
-;
+  } 
+`;
 
 export const fetchComments = async () => {
     const reponse = await fetch (ENDPOINT_URL, {

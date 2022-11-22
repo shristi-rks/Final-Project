@@ -1,3 +1,4 @@
+import React from 'react';
 import Navbar from './Navbar';
 import './App.css';
 import Home from './components/pages/Home';
@@ -7,6 +8,7 @@ import Blogdetail from './Blogdetail';
 
 import Login from './components/pages/Login';
 import About from './components/pages/About';
+
 
 function App() {
   return (
@@ -20,11 +22,13 @@ function App() {
             <Route path="/blogs/:id" element={<Blogdetail />} />
             <Route path="/about" element={<About/>} ></Route>
             <Route path="/login" element={<Login />} />
+          
           </Routes>
         </div>
       </div>
     </BrowserRouter>
   );
+
 }
 
 export default App;

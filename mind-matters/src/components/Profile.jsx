@@ -5,7 +5,7 @@ const Profile = ({helper}) => {
                 <li>{helper.nick_name}</li>
                 <li>{helper.gender}</li>
                 <li>{helper.age}</li>
-                <li>{helper.Price}</li>
+                <li>{helper.price}</li>
                 <li>{helper.address}</li>
                 <li>{helper.bio}</li>
             </ul>

@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { fetchHelperData } from "../fetch-data";
 import Profile from './Profile'
+
 function Display() {
   const [helperData, setHelperData] = useState();
   const fetchData = async function () {

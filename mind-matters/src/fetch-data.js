@@ -1,26 +1,21 @@
 const ENDPOINT_URL = "https://intimate-zebra-90.hasura.app/v1/graphql";
 const COMMENTS_QUERY = `
-query LookHelperData { 
+query HelperInfo { 
     helper_data {
-      id,
-      first_name,
-      last_name,
-      nick_name,
-      gender,
-      age,
-      email,
-      address,
-      bio,
-      motivation,
-      price,
-      image
+      id
+      nick_name
+      gender
+      age
+      address
+      bio
+      price
     }
   } 
 `;
 
-export const fetch = async () => {
+export const fetchHelperData = async () => {
     const response = await fetch (ENDPOINT_URL, {
-        METHOD: "POST",
+        method: "POST",
         body: JSON.stringify ( {
             query: COMMENTS_QUERY
         })

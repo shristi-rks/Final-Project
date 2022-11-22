@@ -1,12 +1,9 @@
-import Display from '../Display'
-
-
 import React from 'react'
 
 const Home = () => {
   return (
     <div>
-      <Display/>
+      <h1>Home</h1>
     </div>
   )
 }

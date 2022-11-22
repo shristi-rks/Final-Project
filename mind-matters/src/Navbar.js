@@ -6,8 +6,8 @@ const Navbar = () => {
     <h1> MIND MATTERS</h1>
     <div className="links">
       <Link to="/">Home</Link>
-      <Link to="/testimonials"> Testimonials</Link>
       <Link to="/about">About Us!</Link>
+      <Link to="/testimonials"> Testimonials</Link>
       <Link to="/login">Login/SignUp</Link>
     </div>
   </nav>

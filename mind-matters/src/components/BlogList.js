@@ -1,5 +1,13 @@
+import { Link } from "react-router-dom"
 
-
+/**
+ * fueifjeifjeijeiejfiejfiejfe
+ * 
+ * 
+ * @param {Object} props
+ * @param {[]|undefined} props.blogs 
+ * @returns 
+ */
 const BlogList = ({blogs, title}) => {
     //const blogs = props.blogs
    // const title = props.title
@@ -7,9 +15,12 @@ const BlogList = ({blogs, title}) => {
     <div className="blog-list">
         <h2>{title} </h2>
         {blogs &&
-        blogs.map((blog) => (<div className='blog-preview' key={blog.id}>
+        blogs.map((blog) => (
+        <div className='blog-preview' key={blog.id}>
+            <Link to={`/blogs/${ blog.id }`}>
             <h2>{blog.title}</h2>
-            <p> was writed my{blog.author} </p>
+            <p>  Written by -{blog.author} </p>
+            </Link>
             
         </div>) )}
     </div>

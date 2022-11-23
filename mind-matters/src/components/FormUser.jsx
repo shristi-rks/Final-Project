@@ -1,9 +1,13 @@
 import React from 'react';
 import { useForm } from 'react-hook-form'
+import { addUserData } from '../postUserData';
 
 const FormUser = () => {
     const { register, handleSubmit } = useForm()
-    const onSubmit = data => console.log(data);
+    const onSubmit = async(requestData) => {
+        const responseData = await addUserData(requestData)
+        console.log(responseData);
+    }
     return (
             <section>
                 <div className="login">

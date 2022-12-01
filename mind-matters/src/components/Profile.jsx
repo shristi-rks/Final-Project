@@ -1,7 +1,7 @@
 const Profile = ({helper}) => {
     return (
         <div>
-            <ul key = {helper.id}>
+            <ul>
                 <li>{helper.nick_name}</li>
                 <li>{helper.gender}</li>
                 <li>{helper.age}</li>

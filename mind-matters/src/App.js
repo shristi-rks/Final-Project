@@ -4,8 +4,10 @@ import './App.css';
 import Home from './components/pages/Home';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import About from './components/pages/About';
-import FormUser from './components/FormUser';
+
 import Display from './components/Display';
+import Login from './components/pages/Login';
+
 
 function App() {
   return (
@@ -18,11 +20,12 @@ function App() {
             <Route exact path="/" element={<Home />} />
             <Route path="/about" element={<About/>} />
             <Route path="/helper-profile:id" element={<Display />} />
-            <Route path="/login" element={<FormUser />} />
+            <Route path="/login" element={< Login/>} />
           </Routes>
         </div>
       </div>
     </BrowserRouter>
+    
     </>
   );
 

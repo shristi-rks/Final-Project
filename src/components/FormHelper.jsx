@@ -15,7 +15,7 @@ const FormHelper = () => {
                             <input type="text" {...register("firstname")} placeholder='firstname' />
                             <input type="text" {...register("lastname")} placeholder='username/nickname' />
                             <input type="text" {...register("nickname")} placeholder='username/nickname' />
-                            <input type="text" {...register("email", { required : true })} placeholder='email' />
+                            <input type="text" {...register("email", { required : true                                                  })} placeholder='email' />
                             <input type="text" {...register("password")} placeholder='password' />
                             <input type="text" {...register("confirmpwd")} placeholder='confirm password' />
                             <button className='btn'>Submit</button>

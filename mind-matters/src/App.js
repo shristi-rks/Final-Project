@@ -7,7 +7,6 @@ import Blogdetail from './Blogdetail';
 import Login from './components/pages/Login';
 import About from './components/pages/About';
 import Testimonials from './components/pages/Testimonials';
-import Display from './components/Display'
 
 function App() {
   return (
@@ -26,9 +25,7 @@ function App() {
         </div>
       </div>
     </BrowserRouter>
-    <div>
-    <Display />
-    </div>
+    
     </>
   );
 

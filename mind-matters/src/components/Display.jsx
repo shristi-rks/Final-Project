@@ -14,10 +14,7 @@ function Display() {
   }, []);
   return (
     <div >
-        <div>
-          <h1>Helpers</h1>
-        </div>
-        <div>
+        <div style={{display: 'flex'}}>
           {helperData && helperData.data.helper_data.map(helper => <Profile helper = {helper} /> )}
         </div>
     </div>

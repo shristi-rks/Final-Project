@@ -1,7 +1,8 @@
 import React from 'react';
+
+import { Link } from 'react-router-dom';
 const Profile = ({ helper }) => {
   return (
-    
     <div className="profile">
       <div className="card" key={helper.id}>
         <div className="header">
@@ -34,9 +35,11 @@ const Profile = ({ helper }) => {
               <div className="item">
                 <span>Reviews</span> Rating
               </div>
+              
             </div>
           </div>
         </div>
+        <button type='sumbit'><Link to="/bloglist">BOOK ME</Link></button>
       </div>
     </div>
   );

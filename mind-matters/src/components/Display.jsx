@@ -1,7 +1,7 @@
-import React from "react";
-import { useState, useEffect } from "react";
-import { fetchHelperData } from "../fetch-data";
-import Profile from './Profile'
+import React from 'react';
+import { useState, useEffect } from 'react';
+import { fetchHelperData } from '../fetch-data';
+import Profile from './Profile';
 
 function Display() {
   const [helperData, setHelperData] = useState();
@@ -13,10 +13,14 @@ function Display() {
     fetchData();
   }, []);
   return (
-    <div >
-        <div style={{display: 'flex'}}>
-          {helperData && helperData.data.helper_data.map(helper => <Profile helper = {helper} /> )}
-        </div>
+    <div>
+      <div style={{ display: 'flex' }}>
+        {helperData &&
+          helperData.data.helper_data.map((helper) => (
+            <Profile helper={helper} />
+          ))}
+        
+      </div>
     </div>
   );
 }

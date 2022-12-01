@@ -7,6 +7,7 @@ const Home = () => {
     <div className='page1'>
       
       <h1>Mind First Aid.</h1>
+      <button type=''></button>
       </div>
       <div>
     <Display />

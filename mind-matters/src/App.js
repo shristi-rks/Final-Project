@@ -3,10 +3,11 @@ import Navbar from './Navbar';
 import './App.css';
 import Home from './components/pages/Home';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Blogdetail from './Blogdetail';
-import Login from './components/pages/Login';
 import About from './components/pages/About';
-import Testimonials from './components/pages/Testimonials';
+
+import Display from './components/Display';
+import Login from './components/pages/Login';
+
 
 function App() {
   return (
@@ -18,9 +19,8 @@ function App() {
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route path="/about" element={<About/>} />
-            <Route path="/testimonials" element={<Testimonials />} />
-            <Route path="/blogs/:id" element={<Blogdetail />} />
-            <Route path="/login" element={<Login />} />
+            <Route path="/helper-profile:id" element={<Display />} />
+            <Route path="/login" element={< Login/>} />
           </Routes>
         </div>
       </div>

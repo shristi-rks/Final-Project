@@ -4,6 +4,7 @@ import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import { Container } from "react-bootstrap";
 import { Controller, useForm } from "react-hook-form";
+import './Login.css'
 
  
 export function LogInForm() {
@@ -13,17 +14,19 @@ export function LogInForm() {
       password:''
     }
   });
- 
+ /*The 'control' variable will be used on the 'Controller' element tag(from 'react-hook-form') 
+ so that form has control over the actual element inside of it. */
+
   const submitForm = (data) => {
     console.log(data);
   };
  
   return (
     <>
-      <Container id="main-container" className="d-grid h-100">
-        <Form id="sign-in-form" className="text-center p-3 w-100" noValidate onSubmit={handleSubmit(submitForm)}>
+      <Container id="main-container" className="h-100 justify-content-center">
+        <Form id="sign-in-form" className="text-center p-3 " noValidate onSubmit={handleSubmit(submitForm)}>
         <h1 className="mb-3 fs-3 fw-normal">Sign In</h1>
-        <Row className="mb-3">
+        <Row className="mb-3 justify-content-center">
         <Form.Group as={Col} md="4">
               <Controller
                 name="userName"
@@ -34,7 +37,7 @@ export function LogInForm() {
               />
             </Form.Group>
         </Row>
-        <Row className="mb-3">
+        <Row className="mb-3 justify-content-center">
         <Form.Group as={Col} md="4" >
                <Controller
                 name="password"

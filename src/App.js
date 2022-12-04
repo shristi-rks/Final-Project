@@ -7,6 +7,8 @@ import About from './components/pages/About';
 
 import Display from './components/Display';
 import { LogInForm } from './components/LogInForm';
+import FormUser from './components/FormUser';
+import FormHelper from './components/FormHelper';
 
 
 function App() {
@@ -21,6 +23,8 @@ function App() {
             <Route path="/about" element={<About/>} />
             <Route path="/helper-profile:id" element={<Display />} />
             <Route path="/login" element={< LogInForm/>} />
+            <Route path="/FormUser" element={< FormUser/>} />
+            <Route path="/FormHelper" element={< FormHelper/>} />
           </Routes>
         </div>
       </div>

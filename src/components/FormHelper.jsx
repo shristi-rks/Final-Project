@@ -1,30 +1,56 @@
-import React from 'react';
-import { useForm } from 'react-hook-form'
-
-const FormHelper = () => {
-    const { register, handleSubmit } = useForm()
-    const onSubmit = data => console.log(data);
-    return (
-            <section>
-                <div className="login">
-                  
-                        <h2>User Registration</h2>
-                        <span>register and enjoy the service</span>
-        
-                        <form id='form1' onSubmit={handleSubmit(onSubmit)}>
-                            <input type="text" {...register("firstname")} placeholder='firstname' />
-                            <input type="text" {...register("lastname")} placeholder='username/nickname' />
-                            <input type="text" {...register("nickname")} placeholder='username/nickname' />
-                            <input type="text" {...register("email", { required : true                                                  })} placeholder='email' />
-                            <input type="text" {...register("password")} placeholder='password' />
-                            <input type="text" {...register("confirmpwd")} placeholder='confirm password' />
-                            <button className='btn'>Submit</button>
-                        </form>
-        
-                
-                </div>
-            </section>
-    )
+import Row from "react-bootstrap/Row";
+import Button from "react-bootstrap/Button";
+import Col from "react-bootstrap/Col";
+import Form from "react-bootstrap/Form";
+import { Container } from "react-bootstrap";
+import { Controller, useForm } from "react-hook-form";
+ 
+function FormHelper() {
+  const {
+    control,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    defaultValues: {
+      firstName: "",
+    },
+  });
+ 
+  const submitForm = (data) => {
+    console.log(data);
+  };
+ 
+  return (
+    <>
+      <Container>
+        <Form noValidate onSubmit={handleSubmit(submitForm)}>
+          <Row className="mb-3">
+            <Form.Group as={Col} md="4" controlId="validationCustom01">
+              <Form.Label>First Name</Form.Label>
+              <Controller
+                name="firstName"
+                control={control}
+                rules={{ required: true }}
+                render={({ field }) => (
+                  <Form.Control
+                    {...field}
+                    type="text"
+                    placeholder="First name"
+                    isInvalid={errors.firstName}
+                  />
+                )}
+              />
+              {errors.firstName && (
+                <Form.Control.Feedback type="invalid">
+                  First Name is required
+                </Form.Control.Feedback>
+              )}
+            </Form.Group>
+          </Row>
+          <Button type="submit">Submit form</Button>
+        </Form>
+      </Container>
+    </>
+  );
 }
-
 export default FormHelper;

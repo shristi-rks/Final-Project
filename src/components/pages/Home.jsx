@@ -1,5 +1,5 @@
 import React from 'react'
-import Display from '../Display'
+import Button from '../Button'
 
 const Home = () => {
   return (
@@ -9,7 +9,7 @@ const Home = () => {
       <h1>Mind First Aid.</h1>
       </div>
       <div>
-    <Display />
+    <Button/>
     </div>
    
     </>

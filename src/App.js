@@ -6,7 +6,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import About from './components/pages/About';
 
 import Display from './components/Display';
-import FormUser from './components/FormUser';
+import { LogInForm } from './components/LogInForm';
 
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
             <Route exact path="/" element={<Home />} />
             <Route path="/about" element={<About/>} />
             <Route path="/helper-profile:id" element={<Display />} />
-            <Route path="/login" element={< FormUser/>} />
+            <Route path="/login" element={< LogInForm/>} />
           </Routes>
         </div>
       </div>

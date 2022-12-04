@@ -22,3 +22,23 @@ const Form = () => {
     )
 }
 export default Form ;
+/*            <section>
+                <div className="login">
+                    <div className="div">
+                        <h2>Sign In</h2>
+                        <br />
+                        <br />
+                    </div>
+        
+                        <form id='form'  onSubmit={handleSubmit(onSubmit)}>
+                            <input type="text" {...register("username")} placeholder='username/nickname' />
+                            <br />
+                            <br />
+                            <input type="text" {...register("password")} placeholder='password' />
+                            <br />
+                            <br />
+                            <button className='btn'>Sign In</button>
+                        </form>
+
+                </div>
+            </section>*/

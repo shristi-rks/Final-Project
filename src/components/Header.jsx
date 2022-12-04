@@ -6,7 +6,7 @@ const Header = () => {
         
             <div>
                 <Link to="/LogInForm">
-                <h3>Login/SignUp</h3>
+                <h3>Login</h3>
                 </Link>
 
             </div>

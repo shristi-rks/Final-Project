@@ -1,4 +1,4 @@
-.login {
+/*.login {
     width: 550px;
     height:350px;
     padding: 20px;
@@ -17,4 +17,21 @@
 .btn {
 background-color: blue;
 color: aliceblue;
-}
+}*/
+
+#main-container {
+    place-items: center center;
+  }
+  
+  #sign-in-form {
+    max-width: 330px;
+  }
+  
+  .bootstrap-logo {
+    width: 72px;
+    height: 72px;
+  }
+  
+  .form-control:focus {
+    z-index: 5;
+  }

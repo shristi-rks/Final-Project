@@ -2,6 +2,7 @@ import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
+import InputGroup from 'react-bootstrap/InputGroup';
 import { Container } from "react-bootstrap";
 import { Controller, useForm } from "react-hook-form";
  
@@ -12,13 +13,20 @@ function FormHelper() {
       lastName: "",
       nickName: "",
       userName: "",
-      agr: "",
+      age: "",
       gender: "",
       email: "",
       phone: "",
       password1: "",
       password2: "",
-    },
+      address: "",
+      city: "",
+      postalCode: "",
+      price: "",
+      motivation: "",
+      bio: "",
+      image: "",
+    }
   });
  
   const submitForm = (data) => {
@@ -27,7 +35,7 @@ function FormHelper() {
   const password1And2ShouldMatch = (value) => {
     return value === getValues("password1");
   };
- 
+
   return (
     <>
       <Container>
@@ -183,7 +191,104 @@ function FormHelper() {
               )}
             </Form.Group>
           </Row>
-          <Button type="submit">Submit form</Button>
+          <Row className="mb-3">
+          <Form.Group className="mb-3" md="4" controlId="formGridAddress">
+        <Form.Label>Address</Form.Label>
+        <Controller
+                name="userName"
+                control={control}
+                render={({ field }) => (
+                  <Form.Control {...field} type="text" placeholder="Apartment, studio, or floor" /> 
+                )}
+              />
+      </Form.Group>
+        <Form.Group as={Col}  controlId="formGridCity">
+          <Form.Label>City</Form.Label>
+          <Controller
+                name="city"
+                control={control}
+                rules={{ required: true }}
+                render={({ field }) => (
+                  <Form.Control  {...field} type="text" placeholder="City" isInvalid={errors.city} /> 
+                )}
+              />
+              {errors.city && (<Form.Control.Feedback type="invalid">City is required</Form.Control.Feedback>)}
+        </Form.Group>
+        <Form.Group as={Col} controlId="formGridZip">
+          <Form.Label>Postal Code</Form.Label>
+          <Controller
+                name="postalCode"
+                control={control}
+                render={({ field }) => (
+                  <Form.Control  {...field} type="text" placeholder="Postal code"  /> 
+                )}
+              />
+        </Form.Group>
+      </Row>
+      <Row className="mb-3">
+            <InputGroup >
+            <Form.Label>Price</Form.Label>
+            <br/>
+            <InputGroup.Text>€</InputGroup.Text>
+              <Controller
+                name="price"
+                control={control}
+                rules={{ required: true }}
+                render={({ field }) => (
+                  <Form.Select aria-label="Default select example" {...field} type="text" placeholder="Price" isInvalid={errors.age}>
+                  <option>Price per session</option>
+                  <option value="1">20</option>
+                  <option value="2">30</option>
+                  <option value="3">50</option>
+                  <option value="3">Donation</option>
+                </Form.Select>
+                )}
+              />
+              {errors.price && (<Form.Control.Feedback type="invalid">required field</Form.Control.Feedback>)}
+              </InputGroup>
+            <Form.Group className="mb-3" id="formGridCheckbox">
+            <Form.Check type="checkbox" label="I understand that the first session is free" />
+            </Form.Group>
+        </Row>
+        <Row>
+        <Form.Label>Why do you want to become a helper?<br/><small><strong>This will not appear on your Profile</strong></small><br/></Form.Label>
+        </Row>
+        <Row className="mb-3">
+          <InputGroup>
+            <InputGroup.Text>Your <br/> Motivation</InputGroup.Text>
+            <Controller
+                name="motivation"
+                control={control}
+                rules={{ required: true }}
+                render={({ field }) => (
+                  <Form.Control  {...field} as="textarea" aria-label="With textarea"  isInvalid={errors.motivation} /> 
+                )}
+              />
+              {errors.city && (<Form.Control.Feedback type="invalid">required field</Form.Control.Feedback>)}
+        </InputGroup>
+        </Row> 
+        <Row>
+        <Form.Group as={Col}  controlId="formGridCity">
+          <Form.Label>Bio<br/><small><strong>Note! This will appear on your Profile</strong></small></Form.Label>
+          <Controller
+                name="bio"
+                control={control}
+                rules={{ required: true }}
+                render={({ field }) => (
+                  <Form.Control  {...field} type="textarea" placeholder="Your Bio/Profile" isInvalid={errors.city} /> 
+                )}
+              />
+              {errors.bio && (<Form.Control.Feedback type="invalid">required field</Form.Control.Feedback>)}
+        </Form.Group>
+        </Row>
+        <Row>
+            <Form.Group className="d-flex justify-content-center mb-4" controlId="tor">
+                <Form.Check label={`<p>I have read and agree to Mind-matters’s <a href='https://www.mindmatters.website/privacy-policy'>User Agreement and Privacy Policy.</a></p>`}/>   
+            </Form.Group>
+        </Row>
+        <div>
+        <Button type="submit">Submit form</Button>
+        </div>
         </Form>
       </Container>
     </>

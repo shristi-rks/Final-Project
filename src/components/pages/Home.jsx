@@ -6,7 +6,8 @@ const Home = () => {
     <>
     <div className='page1'>
       
-      <h1>Mind First Aid.</h1>
+      <h1>We’ve been there.<br/>We know how it feels.</h1>
+      <h2>Get matched with someone in our network that has<br/> already been through what you are going through.</h2>
       </div>
       <div>
     <Button/>

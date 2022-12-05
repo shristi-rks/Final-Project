@@ -1,62 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-*{
+* {
   margin: 0;
   font-family: 'Lato', sans-serif;
   box-sizing: border-box;
   padding: 0;
   font-weight: solid;
-  
 }
-.navbar{
+.navbar {
   padding: 20px;
   display: flex;
   align-items: center;
-  max-width: 1600px;
+  /* max-width: 1600px; */
   margin: 0 auto;
   border-bottom: 2px solid rgb(16, 210, 68);
 }
-.navbar h1{
+.navbar h1 {
   color: rgb(36, 12, 214);
-  
 }
-.navbar .links{
+.navbar .links {
   margin-left: auto;
-  
 }
-.navbar a{
+.navbar a {
   margin-left: 16px;
   text-decoration: none;
   padding: 10px;
-
 }
-.navbar a:hover{
+.navbar a:hover {
   color: aqua;
 }
-.page1{
-
-    text-align: center;
-    padding: 60px;
-    overflow: hidden;
+.page1 {
+  background: url(https://images.pexels.com/photos/5706054/pexels-photo-5706054.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)
+    no-repeat center;
+  background-size: cover;
+  text-align: center;
+  padding: 60px;
+  overflow: hidden;
+  height: 100vh;
 }
 
-.profile{
-  
-  background: url(https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) no-repeat center;
+.profile {
+  /* background: url(https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) no-repeat center;
   background-size: cover;
   padding: 10px;
- /* align-items: flex-start;
+ align-items: flex-start;
   justify-content: flex-start;
   
 	width: 99%;
 	margin: auto;*/
-	display: flex;
+  display: flex;
   flex-wrap: wrap;
-	justify-content: space-between;
-	
+  justify-content: space-between;
 }
 
-.card{
-  
+.card {
   text-align: center;
   border-radius: 8px;
   overflow: hidden;
@@ -65,14 +61,12 @@
   flex-wrap: wrap;
 }
 
-.header{
+.header {
   background: #5f9ad1;
   padding: 40px 30px;
-
 }
 
-.img{
-  
+.imgs {
   padding: 8px;
   background: linear-gradient(150deg, #767c81, #9867e6);
   margin: auto;
@@ -81,110 +75,106 @@
   animation: animated-gradient 2s linear infinite;
 }
 
-@keyframes animated-gradient{
-  25%{
+@keyframes animated-gradient {
+  25% {
     background-position: left bottom;
   }
-  50%{
+  50% {
     background-position: right bottom;
   }
-  75%{
+  75% {
     background-position: right top;
   }
-  100%{
+  100% {
     background-position: left top;
   }
 }
 
-.pic img{
+.pic img {
   display: block;
   width: 100px;
   height: 100px;
   border-radius: 50%;
 }
 
-.name{
+.name {
   color: #f2f2f2;
   font-size: 28px;
   font-weight: 600;
   margin: 10px 0;
 }
 
-.bio{
+.bio {
   font-size: 18px;
   color: #e66767;
   background: #f4f4f4;
   padding: 60px 10px;
-  
 }
 
-.sm{
+.price{
   color: #f2f2f2;
   display: flex;
   justify-content: flex-end;
   margin: 20px 0;
 }
 
-.sm-space{
+.sm-space {
   color: #f2f2f2;
   display: flex;
   justify-content: flex-end;
   margin: 20px 0;
 }
-.sm a{
-
+.sm a {
   color: #f2f2f2;
   width: 56px;
   font-size: 22px;
-  transition: .3s linear;
+  transition: 0.3s linear;
 }
 
-.sm a:hover{
+.sm a:hover {
   color: #e66767;
 }
 
-.contact-btn{
+.contact-btn {
   display: inline-block;
   padding: 12px 50px;
   color: #e66767;
   border: 2px solid #e66767;
   border-radius: 6px;
   margin-top: 16px;
-  transition: .3s linear;
+  transition: 0.3s linear;
 }
 
-.contact-btn:hover{
+.contact-btn:hover {
   background: #e66767;
   color: #f2f2f2;
 }
 
-.footer{
+.footer {
   background: #f4f4f4;
   padding: 60px 10px;
-  
 }
 
-.numbers{
+.numbers {
   display: flex;
   align-items: center;
 }
 
-.item{
+.item {
   flex: 1;
   text-transform: uppercase;
   font-size: 15px;
   color: rgb(188, 56, 56);
 }
 
-.item span{
+.item span {
   display: block;
   color: orange;
   font-size: 20px;
 }
 
-.border{
+.border {
   width: 1px;
   height: 30px;
   background: #bbb;
 }
-

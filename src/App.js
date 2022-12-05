@@ -9,6 +9,8 @@ import Display from './components/Display';
 import { LogInForm } from './components/LogInForm';
 import FormUser from './components/FormUser';
 import FormHelper from './components/FormHelper';
+import BlogList from './components/BlogList';
+
 
 
 function App() {
@@ -25,6 +27,7 @@ function App() {
             <Route path="/login" element={< LogInForm/>} />
             <Route path="/FormUser" element={< FormUser/>} />
             <Route path="/FormHelper" element={< FormHelper/>} />
+            <Route path="/bloglist" element={<BlogList />} />
           </Routes>
         </div>
       </div>

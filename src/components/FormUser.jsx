@@ -11,9 +11,10 @@ const FormUser = () => {
     return (
             <section>
                 <div className="login">
-                  
+                  <div className="head">
                         <h2>User Registration</h2>
-                        <span>register and enjoy the service</span>
+                        <p>register and enjoy the service</p>
+                        </div>
     
                         <form id='form1' onSubmit={handleSubmit(onSubmit)}>
                             <input type="text" {...register("username")} placeholder='username' />

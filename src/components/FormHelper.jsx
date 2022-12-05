@@ -282,10 +282,32 @@ function FormHelper() {
         </Form.Group>
         </Row>
         <Row>
+        <Form.Group controlId="formFile" className="mb-3">
+        <Form.Label>Upload image</Form.Label>
+        <Controller
+                name="image"
+                control={control}
+                rules={{ required: true }}
+                render={({ field }) => (
+                  <Form.Control  {...field} type="file"  /> 
+                )}
+                />
+      </Form.Group>
+        </Row>
+        <Row>
             <Form.Group className="d-flex justify-content-center mb-4" controlId="tor">
-                <Form.Check label={`<p>I have read and agree to Mind-matters’s <a href='https://www.mindmatters.website/privacy-policy'>User Agreement and Privacy Policy.</a></p>`}/>   
+            <Controller
+                name="policy"
+                control={control}
+                rules={{ required: true }}
+                render={({ field }) => (
+                    <Form.Check {...field} label=<p>I have read and agree to Mind-matters’s <a href='https://www.mindmatters.website/privacy-policy'>User Agreement and Privacy Policy.</a></p> isInvalid={errors.policy}/>    
+                )}
+              />
+              {errors.policy && (<Form.Control.Feedback type="invalid">required field</Form.Control.Feedback>)}
             </Form.Group>
         </Row>
+       
         <div>
         <Button type="submit">Submit form</Button>
         </div>

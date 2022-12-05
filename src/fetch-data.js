@@ -9,6 +9,7 @@ query HelperInfo {
       city
       bio
       price
+      publish
     }
   } 
 `;

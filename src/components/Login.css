@@ -1,20 +1,13 @@
-.login {
-    width: 550px;
-    height:350px;
-    padding: 20px;
-    border: 1px solid black;
-    border-radius: 10px;
-    margin: auto;
-    text-align: center;
-    
-}
 
-#form {
-    border-radius: 10px;
+#main-container {
+    place-items: center center;
+  }
+  
+  #sign-in-form {
+    max-width: 800px;
     
-}
-
-.btn {
-background-color: blue;
-color: aliceblue;
-}
+  }
+  
+  .form-control:focus {
+    z-index: 5;
+  }

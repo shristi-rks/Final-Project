@@ -1,9 +1,6 @@
-const Button = ({text, handleClick}) => {
-    return <button onClick={handleClick}>{text}</button>
+
+const Button = () => {
+    return <button><a href = './FormHelper'>Register as a Helper</a></button>
 }
 export default Button;
 
-//App.js
-/*
-<Button text= "submit" handleClick={}/>
-<Button text= "search" handleClick={}/>*/

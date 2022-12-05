@@ -5,13 +5,13 @@ import Form from "react-bootstrap/Form";
 import InputGroup from 'react-bootstrap/InputGroup';
 import { Container } from "react-bootstrap";
 import { Controller, useForm } from "react-hook-form";
+import { addHelperData } from "../postHelperData"
  
 function FormHelper() {
   const {control,handleSubmit,formState: { errors },getValues} = useForm({
     defaultValues: {
       firstName: "",
       lastName: "",
-      nickName: "",
       userName: "",
       age: "",
       gender: "",
@@ -26,12 +26,14 @@ function FormHelper() {
       motivation: "",
       bio: "",
       image: "",
+      policy: "",
     }
   });
  
-  const submitForm = (data) => {
-    console.log(data);
-  };
+  const submitForm = async(requestData) => {
+    const responseData = await addHelperData(requestData)
+    console.log(responseData);
+}
   const password1And2ShouldMatch = (value) => {
     return value === getValues("password1");
   };
@@ -39,7 +41,7 @@ function FormHelper() {
   return (
     <>
       <Container>
-        <Form noValidate onSubmit={handleSubmit(submitForm)} controlId="validationCustom01" >
+        <Form noValidate onSubmit={handleSubmit(submitForm)}  >
         <h1 className="mb-3 fs-3 fw-normal">Register as a Helper</h1>
           <Row className="mb-3">
           <Col md>
@@ -101,11 +103,11 @@ function FormHelper() {
                 render={({ field }) => (
                   <Form.Select aria-label="Default select example" {...field} type="text" placeholder="Age" isInvalid={errors.age}>
                   <option>Select your age</option>
-                  <option value="1">20-30</option>
-                  <option value="2">30-40</option>
-                  <option value="3">40-50</option>
-                  <option value="4">50-60</option>
-                  <option value="5">60-70</option>
+                  <option value="20-30">20-30</option>
+                  <option value="30-40">30-40</option>
+                  <option value="40-50">40-50</option>
+                  <option value="50-60">50-60</option>
+                  <option value="60-70">60-70</option>
                 </Form.Select>
                 )}
               />
@@ -122,10 +124,10 @@ function FormHelper() {
                 render={({ field }) => (
                   <Form.Select aria-label="Default select example" {...field} type="text" placeholder="Gender" isInvalid={errors.age}>
                   <option>Gender</option>
-                  <option value="1">Male</option>
-                  <option value="2">Female</option>
-                  <option value="3">Other</option>
-                  <option value="4">Do not prefer to mention</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Other">Other</option>
+                  <option value="Do not prefer to mention">Do not prefer to mention</option>
                 </Form.Select>
                 )}
               />
@@ -192,7 +194,7 @@ function FormHelper() {
             </Form.Group>
           </Row>
           <Row className="mb-3">
-          <Form.Group className="mb-3" md="4" controlId="formGridAddress">
+          <Form.Group className="mb-3" md="4">
         <Form.Label>Address</Form.Label>
         <Controller
                 name="userName"
@@ -202,7 +204,7 @@ function FormHelper() {
                 )}
               />
       </Form.Group>
-        <Form.Group as={Col}  controlId="formGridCity">
+        <Form.Group as={Col} >
           <Form.Label>City</Form.Label>
           <Controller
                 name="city"
@@ -214,7 +216,7 @@ function FormHelper() {
               />
               {errors.city && (<Form.Control.Feedback type="invalid">City is required</Form.Control.Feedback>)}
         </Form.Group>
-        <Form.Group as={Col} controlId="formGridZip">
+        <Form.Group as={Col}>
           <Form.Label>Postal Code</Form.Label>
           <Controller
                 name="postalCode"
@@ -227,7 +229,7 @@ function FormHelper() {
       </Row>
       <Row className="mb-3">
             <InputGroup >
-            <Form.Label>Price</Form.Label>
+            <Form.Label>Price<div><p><strong>Note that the first session is free</strong></p></div></Form.Label>
             <br/>
             <InputGroup.Text>€</InputGroup.Text>
               <Controller
@@ -245,10 +247,13 @@ function FormHelper() {
                 )}
               />
               {errors.price && (<Form.Control.Feedback type="invalid">required field</Form.Control.Feedback>)}
+              
               </InputGroup>
+              {/*
             <Form.Group className="mb-3" id="formGridCheckbox">
             <Form.Check type="checkbox" label="I understand that the first session is free" />
             </Form.Group>
+                */}
         </Row>
         <Row>
         <Form.Label>Why do you want to become a helper?<br/><small><strong>This will not appear on your Profile</strong></small><br/></Form.Label>
@@ -268,7 +273,7 @@ function FormHelper() {
         </InputGroup>
         </Row> 
         <Row>
-        <Form.Group as={Col}  controlId="formGridCity">
+        <Form.Group as={Col} >
           <Form.Label>Bio<br/><small><strong>Note! This will appear on your Profile</strong></small></Form.Label>
           <Controller
                 name="bio"
@@ -282,12 +287,11 @@ function FormHelper() {
         </Form.Group>
         </Row>
         <Row>
-        <Form.Group controlId="formFile" className="mb-3">
+        <Form.Group className="mb-3">
         <Form.Label>Upload image</Form.Label>
         <Controller
                 name="image"
                 control={control}
-                rules={{ required: true }}
                 render={({ field }) => (
                   <Form.Control  {...field} type="file"  /> 
                 )}
@@ -295,7 +299,7 @@ function FormHelper() {
       </Form.Group>
         </Row>
         <Row>
-            <Form.Group className="d-flex justify-content-center mb-4" controlId="tor">
+            <Form.Group className="d-flex justify-content-center mb-4" >
             <Controller
                 name="policy"
                 control={control}

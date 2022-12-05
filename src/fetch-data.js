@@ -3,10 +3,10 @@ const COMMENTS_QUERY = `
 query HelperInfo { 
     helper_data {
       id
-      nick_name
+      userName
       gender
       age
-      address
+      city
       bio
       price
     }

@@ -8,7 +8,7 @@ import { Controller, useForm } from "react-hook-form";
 import { addHelperData } from "../postHelperData"
  
 function FormHelper() {
-  const {control,handleSubmit,formState: { errors },getValues} = useForm({
+  const {control,handleSubmit,formState: { errors }} = useForm({
     defaultValues: {
       firstName: "",
       lastName: "",
@@ -34,9 +34,6 @@ function FormHelper() {
     const responseData = await addHelperData(requestData)
     console.log(responseData);
 }
-  const password1And2ShouldMatch = (value) => {
-    return value === getValues("password1");
-  };
 
   return (
     <>
@@ -171,26 +168,14 @@ function FormHelper() {
           <Row className="mb-3">
             <Form.Group as={Col} md="4">
               <Form.Label>Password</Form.Label>
-              <Controller
-                name="password1"
-                control={control}
-                render={({ field }) => (
-                  <Form.Control {...field} type="password" placeholder="Password" />
-                )}
-              />
+                  <Form.Control type="password" placeholder="Password" />
             </Form.Group>
             <Form.Group as={Col} md="4">
               <Form.Label>Confirm Password</Form.Label>
-              <Controller
-                name="password2"
-                control={control}
-                rules={{ validate: password1And2ShouldMatch }}
-                render={({ field }) => (
-                  <Form.Control {...field} type="password" placeholder="Confirm Password" isInvalid={errors.password2} />
-                )}
-              />
-              {errors.password2?.type !== "validate" && (<Form.Control.Feedback type="invalid"> Password should be same</Form.Control.Feedback>
-              )}
+              
+                  <Form.Control  type="password" placeholder="Confirm Password" isInvalid={errors.password2} />
+               
+
             </Form.Group>
           </Row>
           <Row className="mb-3">

@@ -197,7 +197,7 @@ function FormHelper() {
           <Form.Group className="mb-3" md="4">
         <Form.Label>Address</Form.Label>
         <Controller
-                name="userName"
+                name="address"
                 control={control}
                 render={({ field }) => (
                   <Form.Control {...field} type="text" placeholder="Apartment, studio, or floor" /> 
@@ -237,12 +237,12 @@ function FormHelper() {
                 control={control}
                 rules={{ required: true }}
                 render={({ field }) => (
-                  <Form.Select aria-label="Default select example" {...field} type="text" placeholder="Price" isInvalid={errors.age}>
+                  <Form.Select aria-label="Default select example" {...field} type="text" placeholder="Price" isInvalid={errors.price}>
                   <option>Price per session</option>
-                  <option value="1">20</option>
-                  <option value="2">30</option>
-                  <option value="3">50</option>
-                  <option value="3">Donation</option>
+                  <option value="20">20</option>
+                  <option value="30">30</option>
+                  <option value="50">50</option>
+                  <option value="Donation">Donation</option>
                 </Form.Select>
                 )}
               />

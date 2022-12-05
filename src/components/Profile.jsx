@@ -15,7 +15,7 @@ const Profile = ({ helper }) => {
               height="400px"
             />
           </div>
-          <div className="name">{helper.nick_name}</div>
+          <div className="name">{helper.userName}</div>
           <div>
             <div className="bio">"{helper.bio}"</div>
           </div>
@@ -29,7 +29,7 @@ const Profile = ({ helper }) => {
               </div>
 
               <div className="item">
-                <span>{helper.address} </span> Finland
+                <span>{helper.city} </span> Finland
               </div>
               <div className="item">
                 <span>Reviews</span> Rating

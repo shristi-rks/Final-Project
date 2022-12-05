@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 const Profile = ({ helper }) => {
+  if (helper.publish === true) {
   return (
     
     <div className="profile">
@@ -42,6 +43,7 @@ const Profile = ({ helper }) => {
       </div>
     </div>
   );
+  }
 };
 
 export default Profile;

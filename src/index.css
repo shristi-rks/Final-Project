@@ -28,15 +28,17 @@
 .navbar a:hover {
   color: aqua;
 }
-.btn Button{
+.btn{
     background-color: white;
     border: none;
     color: black;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 10px;
+    text-decoration: none;
 }
 .page1 {
   background: url(https://images.pexels.com/photos/53534/wild-orchid-orchid-blossom-bloom-53534.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)

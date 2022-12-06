@@ -9,7 +9,7 @@ const Home = () => {
       <h1>We’ve been there.<br/>We know how it feels.</h1>
       <h4>Get matched with someone in our network that has<br/> already been through what you are going through.</h4>
       </div>
-      <div >
+      <div className="btn">
     <Button/>
     </div>
    

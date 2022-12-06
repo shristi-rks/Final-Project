@@ -1,9 +1,9 @@
 
 const Button = () => {
     return (
-    <div className="btn">
+    <div >
       
-    <button><a href = './FormHelper'>Register as a Helper</a></button>  
+    <button ><a href = './FormHelper'>Register as a Helper</a></button>  
     </div>
     )
 }

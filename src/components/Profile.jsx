@@ -1,32 +1,42 @@
 import React from 'react';
 //import { Link } from 'react-router-dom';
-import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
 import CardGroup from 'react-bootstrap/CardGroup';
+import Card from 'react-bootstrap/Card';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Button from 'react-bootstrap/Button';
+import Placeholder from 'react-bootstrap/Placeholder';
+
 import './Profile.css'
+import { Container } from 'react-bootstrap';
 
 const Profile = ({ helper }) => {
   if (helper.publish === true) {
   return (
-    <div className="container d-flex flex-wrap justify-content-around">
-      <CardGroup>
-      <Card  border="primary" style={{ width: '18rem' }}>
+    <Container >
+      <Row xs={1} md={4} className="g-4">
+      <Col>
+      <Card border="primary" style={{ width: '18rem' }}>
         <Card.Img variant="top" 
         src="https://images.pexels.com/photos/14398103/pexels-photo-14398103.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
         alt="profile " />
+        <Card.Header className="text-center"><Card.Title>{helper.userName}</Card.Title></Card.Header>
         <Card.Body>
-          <Card.Title>{helper.userName}</Card.Title>
+        <small className="text-muted">{helper.gender}</small><br/>
+        <small className="text-muted">{helper.age}</small>
+        <small className="text-muted">{helper.price}</small>
           <Card.Text>
             {helper.bio}
-          </Card.Text>
-          <Button variant="primary">Go somewhere</Button>
+          </Card.Text> 
         </Card.Body>
         <Card.Footer>
-          <small className="text-muted">{helper.city}</small>
+          <Button variant="primary">Book here</Button>
+          <p>Review</p>
         </Card.Footer>
       </Card>
-    </CardGroup>
-    </div>
+      </Col>
+      </Row>
+    </Container>
     
   )
 }

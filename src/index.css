@@ -1,9 +1,9 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 * {
-  margin: 0;
+  margin: 0.1em;
   font-family: 'Lato', sans-serif;
-  box-sizing: border-box;
-  padding: 0;
+  padding: 0.1;
   font-weight: solid;
 }
 .navbar {
@@ -11,7 +11,7 @@
   display: flex;
   align-items: center;
   /* max-width: 1600px; */
-  margin: 0 auto;
+  margin: 0.2em;
   border-bottom: 2px solid rgb(16, 210, 68);
 }
 .navbar h1 {
@@ -49,27 +49,7 @@
   color: white;
 }
 
-.profile{
-  
-  padding: 10px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  
-	width: 99%;
-	margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
 
-.card {
-  text-align: center;
-  border-radius: 8px;
-  overflow: hidden;
-  width: auto;
-  display: flex;
-  flex-wrap: wrap;
-}
 
 .header {
   background: #5f9ad1;
@@ -100,6 +80,7 @@
   }
 }
 
+/*
 .pic img {
   display: block;
   width: 100px;
@@ -188,3 +169,4 @@
   height: 30px;
   background: #bbb;
 }
+*/

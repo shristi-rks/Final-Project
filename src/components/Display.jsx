@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { fetchHelperData } from "../fetch-data";
 import Profile from './Profile'
 
+
 function Display() {
   const [helperData, setHelperData] = useState();
   const fetchData = async function () {
@@ -14,8 +15,8 @@ function Display() {
   }, []);
   return (
     <div >
-        <div >
-          {helperData && helperData.data.helper_data.map(helper => <Profile helper = {helper} /> )}
+        <div className='d-flex justify-content-between'>
+          {helperData && helperData.data.helper_data.map(helper => <Profile helper = {helper} key={helper.id} /> )}
         </div>
     </div>
   );

@@ -11,7 +11,7 @@ import './Profile.css'
 const Profile = ({ helper }) => {
   if (helper.publish === true) {
   return (
-    <Container>
+    <Container className='container d-flex justify-content-around'>
       <Row xs={1} md={4} className="g-4">
       <Col>
       <Card border="primary" style={{ width: '18rem' }}>

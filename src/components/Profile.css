@@ -7,4 +7,6 @@
     cursor: pointer;
   }
   
-  
+  .container{
+    margin:2em;
+  }

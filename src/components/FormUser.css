@@ -4,18 +4,15 @@
     color: #adb5bd;
     justify-content: center;
   }
-  
-  #form{
-    max-width: 320px;
-    width: 100vw;
-    margin: 2em auto;
-    justify-content: center;
+  .login h2{
+    margin: 0.5em;
   }
   
   #form1 {
     max-width: 320px;
     width: 100vw;
     margin: 2em auto;
+    justify-content: center;
   }
   
   #form1 >  input, .btn{
@@ -28,7 +25,7 @@
   }
   
   #form1 > .btn{
-    background-color: #003049;
+    background-color: #183be7;
     color: #e9ecef;
     font-size: 1em;
     cursor: pointer;

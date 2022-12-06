@@ -1,10 +1,9 @@
 import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
-import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import { Container } from "react-bootstrap";
 import { Controller, useForm } from "react-hook-form";
-import './Login.css'
+
 
  
 export function LogInForm() {
@@ -23,11 +22,11 @@ export function LogInForm() {
  
   return (
     <>
-      <Container id="main-container" className="h-100 justify-content-center">
-        <Form id="sign-in-form" className="text-center p-3 " noValidate onSubmit={handleSubmit(submitForm)}>
+      <Container  className="h-100 d-flex flex-wrap justify-content-center">
+        <Form className="text-center p-3 " noValidate onSubmit={handleSubmit(submitForm)}>
         <h1 className="mb-3 fs-3 fw-normal">Sign In</h1>
-        <Row className="mb-3 justify-content-center">
-        <Form.Group as={Col} md="4">
+        <Row className="mb-3">
+        <Form.Group >
               <Controller
                 name="userName"
                 control={control}
@@ -37,8 +36,8 @@ export function LogInForm() {
               />
             </Form.Group>
         </Row>
-        <Row className="mb-3 justify-content-center">
-        <Form.Group as={Col} md="4" >
+        <Row className="mb-3">
+        <Form.Group md="4" >
                <Controller
                 name="password"
                 control={control}
@@ -49,7 +48,7 @@ export function LogInForm() {
             </Form.Group>
         </Row>
         <Row>
-            <Form.Group className="d-flex justify-content-center mb-4" controlId="remember-me">
+            <Form.Group className="mb-4" controlId="remember-me">
                 <Form.Check label="Remember me" />
             </Form.Group>
         </Row>

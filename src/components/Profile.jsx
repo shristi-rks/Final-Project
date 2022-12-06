@@ -1,11 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-//import CardGroup from 'react-bootstrap/CardGroup';
 import Card from 'react-bootstrap/Card';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
-import { Container } from 'react-bootstrap';
+import { Container } from 'react-bootstrap'; 
 import './Profile.css'
 
 

@@ -10,7 +10,7 @@ import './Profile.css'
 const HelperSection = ({ helper }) => {
   if (helper.publish === true && helper.id <= 19){
   return (
-    <Container className='container d-flex justify-content-around'>
+    <Container className='profile d-flex justify-content-around'>
       <Row xs={1} md={4} className="g-4">
       <Col>
       <Card border="primary" height={"500px"} style={{ width: '18rem' }}>

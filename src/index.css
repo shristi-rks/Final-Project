@@ -1,20 +1,18 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 * {
-  margin: 0.1em;
   font-family: 'Lato', sans-serif;
-  padding: 0.1;
-  font-weight: solid;
-  
+  font-weight: solid; 
 }
+
 Link {
   text-decoration: none;
 }
 .navbar {
-  padding: 20px;
+  padding: 2em;
   display: flex;
   align-items: center;
-  
+  margin-bottom: 1em;
   margin: 2em;
   border-bottom: 2px solid rgb(16, 210, 68);
 }
@@ -29,7 +27,7 @@ Link {
 .navbar a {
   margin-left: 16px;
   text-decoration: none;
-  padding: 10px;
+  padding: 5px;
 }
 .navbar a:hover {
   color: aqua;
@@ -39,6 +37,7 @@ Link {
   background: url("../public/images/design0.png")
     no-repeat center;
   background-size: cover;
+  margin: 1em;
   height: max-content;
   padding: 30px;
   overflow: hidden;

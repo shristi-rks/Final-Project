@@ -1,18 +1,9 @@
 import React from "react";
-import { useState, useEffect } from "react";
-import { fetchHelperData } from "../fetch-data";
 import Profile from './Profile'
 
 
-function Display() {
-  const [helperData, setHelperData] = useState();
-  const fetchData = async function () {
-    const data = await fetchHelperData();
-    setHelperData(data);
-  };
-  useEffect(() => {
-    fetchData();
-  }, []);
+function Display({helperData}) {
+  
   return (
     <div >
         <div className='d-flex justify-content-between'>

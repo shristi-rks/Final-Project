@@ -301,14 +301,16 @@ function FormHelper() {
         </Row>
        {/* <Row>
             <Form.Group className="mb-3" >
-            <Form.Check
+            <Form.label />
+            <Form.Check />
+            <FormCheck.Input 
             inline
             name="img1"
             type="radio" 
             label=<img alt="#" className="img-fluid" src="https://source.unsplash.com/640x426/?fitness"/>
             id= "img1"
           />
-          <Form.Check
+          <FormCheck.Label
             inline
             name="img2"
             type="radio" 

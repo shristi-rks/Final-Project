@@ -3,7 +3,7 @@ import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import InputGroup from 'react-bootstrap/InputGroup';
-import { Container, FormGroup } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import { Controller, useForm } from "react-hook-form";
 import { addHelperData } from "../postHelperData"
 //import FormCheck from 'react-bootstrap/FormCheck'
@@ -40,6 +40,7 @@ function FormHelper() {
   };
 
   return (
+    
     <>
       <Container>
         <Form noValidate onSubmit={handleSubmit(submitForm)}  >
@@ -104,11 +105,12 @@ function FormHelper() {
                 render={({ field }) => (
                   <Form.Select aria-label="Default select example" {...field} type="text" placeholder="Age" isInvalid={errors.age}>
                   <option>Select your age</option>
-                  <option value="20-30">20-30</option>
+                  <option value="18-30">below 18</option>
+                  <option value="18-30">18-30</option>
                   <option value="30-40">30-40</option>
                   <option value="40-50">40-50</option>
                   <option value="50-60">50-60</option>
-                  <option value="60-70">60-70</option>
+                  <option value="60 and above">60 and above</option>
                 </Form.Select>
                 )}
               />
@@ -240,10 +242,10 @@ function FormHelper() {
                 render={({ field }) => (
                   <Form.Select aria-label="Default select example" {...field} type="text" placeholder="Price" isInvalid={errors.age}>
                   <option>Price per session</option>
-                  <option value="1">20</option>
-                  <option value="2">30</option>
-                  <option value="3">50</option>
-                  <option value="3">Donation</option>
+                  <option value="20">20</option>
+                  <option value="30">30</option>
+                  <option value="50">50</option>
+                  <option value="Donate">Donate</option>
                 </Form.Select>
                 )}
               />
@@ -298,51 +300,7 @@ function FormHelper() {
                 )}
                 />
       </Form.Group>
-        </Row>
-       {/* <Row>
-            <Form.Group className="mb-3" >
-            <Form.label />
-            <Form.Check />
-            <FormCheck.Input 
-            inline
-            name="img1"
-            type="radio" 
-            label=<img alt="#" className="img-fluid" src="https://source.unsplash.com/640x426/?fitness"/>
-            id= "img1"
-          />
-          <FormCheck.Label
-            inline
-            name="img2"
-            type="radio" 
-            label=<img alt="#" className="img-fluid" src="https://source.unsplash.com/640x426/?people"/>
-            id= "img2"
-          />
-          <Form.Check
-            inline
-            name="img3"
-            type="radio" 
-            label=<img alt="#" className="img-fluid" src="https://source.unsplash.com/640x426/?fitness"/>
-            id= "img3"
-          />
-          </Form.Group>
-          <Row>
-            <FormCheck.Input for="imgB" type="radio" className="img-fluid"/> 
-            <FormCheck.Label id="imgB" ><img src="https://source.unsplash.com/640x426/?people" alt="brown male"/></FormCheck.Label>
-            <FormCheck.Input for="imgA" type="radio" className="img-fluid"/> 
-            <FormCheck.Label id="imgA" ><img src="https://source.unsplash.com/640x426/?fitnesse" alt="#"/></FormCheck.Label>
-            
-                </Row>
-                </Row>*/}
-          <Row>
-            <FormGroup>
-          <input type="radio" id="html" name="fav_language" value="HTML"/>
-  <label for="html">HTML</label><br/>
-  <input type="radio" id="css" name="fav_language" value="CSS"/>
-  <label for="css">CSS</label><br/>
-  <input type="radio" id="javascript" name="fav_language" value="JavaScript"/>
-  <label for="javascript">JavaScript</label>
-            </FormGroup>
-          </Row>           
+        </Row>      
         <Row>
             <Form.Group className="d-flex justify-content-center mb-4" >
             <Controller

@@ -12,7 +12,7 @@ const Profile = ({ helper }) => {
   if (helper.publish === true) {
   return (
     <Container className='container d-flex justify-content-around'>
-      <Row xs={1} md={4} className="g-4">
+      <Row xs={1} md={3} className="g-4">
       <Col>
       <Card border="primary" style={{ width: '18rem' }}>
         <Card.Img height={"300px"}  variant="top"
@@ -31,7 +31,7 @@ const Profile = ({ helper }) => {
           <Card.Text>
             "{helper.bio}"
           </Card.Text> 
-          <Button  type= "submit" variant="primary"><Link to="/bloglist"></Link>BOOK ME</Button>
+          <Link to="/bloglist"><Button type= "submit" variant="info">BOOK ME</Button></Link>
         </Card.Body>
         <Card.Footer>
             <div className="text-muted d-flex justify-content-between">
@@ -39,7 +39,7 @@ const Profile = ({ helper }) => {
                 <span>{helper.city} </span> Finland
               </div>
               <div className="item">
-                Price/hr <span>{helper.price} </span> 
+                Price <span>{helper.price} </span> 
               </div>
               <div className="item">
                 <span>Reviews</span> Rating

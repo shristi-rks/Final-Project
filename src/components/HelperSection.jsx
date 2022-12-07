@@ -8,7 +8,7 @@ import './Profile.css'
 
 
 const HelperSection = ({ helper }) => {
-  if (helper.publish === true) {
+  if (helper.publish === true && helper.id <= 19){
   return (
     <Container className='container d-flex justify-content-around'>
       <Row xs={1} md={4} className="g-4">
@@ -27,7 +27,7 @@ const HelperSection = ({ helper }) => {
                 <span>{helper.age}yrs</span> 
             </div>
         </div>
-          <Button  type= "submit" variant="info" size="sm"><Link to="/profile"></Link>See more</Button>
+        <Link to="/helper-profile"><Button  type= "submit" variant="info" size="sm">See more </Button></Link>
         </Card.Body>
         <Card.Footer>
             <div className="text-muted d-flex justify-content-between">
@@ -35,7 +35,7 @@ const HelperSection = ({ helper }) => {
                 <span>{helper.city} </span> Finland
               </div>
               <div className="item">
-                Price/hr <span>{helper.price} </span> 
+                Price<span>{helper.price} </span> 
               </div>
               <div className="item">
                 <span>Reviews</span> Rating

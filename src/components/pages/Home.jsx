@@ -19,10 +19,10 @@ const Home = ({helperData}) => {
     </div>
      </div>
      <div className='container'>
-     <div className='d-flex justify-content-between'>
+     <div className='d-flex flex-wrap justify-content-between'>
           {helperData && helperData.data.helper_data.map(helper => <HelperSection helper = {helper} key={helper.id} /> )}
         </div>
-        <div className='d-flex justify-content-center'>
+        <div className='d-flex flex-wrap justify-content-center'>
         <Link to="/helper-profile"><Button  type= "submit" variant="info" size="sm">More helper profiles</Button></Link>
         </div>
         </div>

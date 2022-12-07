@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from '../Button'
+
 
 const Home = () => {
   return (
@@ -10,11 +10,7 @@ const Home = () => {
       <h4>Get matched with someone in our network that has<br/> already been through what you are going through.</h4>
       
       </div>
-      <div className='btn'>
       
-    <Button/>
-    
-    </div>
     </div>
   )
 }

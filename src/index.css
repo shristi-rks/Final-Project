@@ -11,7 +11,7 @@
   padding: 20px;
   display: flex;
   align-items: center;
-  /* max-width: auto;  */
+  
   margin: 2em;
   border-bottom: 2px solid rgb(16, 210, 68);
 }
@@ -44,14 +44,13 @@
 
 }
 .page1 {
-  background: url(https://images.pexels.com/photos/3013120/pexels-photo-3013120.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)
-    no-repeat center;
+ 
   background-size: cover;
   text-align: right;
   padding: 60px;
   overflow: hidden;
   height: 100vh;
-  color: white;
+  color: black;
 }
 
 .page2 {

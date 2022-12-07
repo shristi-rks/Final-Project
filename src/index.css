@@ -11,14 +11,16 @@
   display: flex;
   align-items: center;
   /* max-width: 1600px; */
-  margin: 0.2em;
+  margin: 2em;
   border-bottom: 2px solid rgb(16, 210, 68);
 }
 .navbar h1 {
   color: rgb(36, 12, 214);
+  font-size: 60px;
 }
 .navbar .links {
   margin-left: auto;
+  font-size: 20px;
 }
 .navbar a {
   margin-left: 16px;
@@ -42,7 +44,8 @@
   background: url("../public/images/design0.png")
     no-repeat center;
   background-size: cover;
-  padding: 100px;
+  height: max-content;
+  padding: 30px;
   overflow: hidden;
   height: 100vh;
   color: rgb(32, 26, 26);

@@ -11,14 +11,16 @@
   display: flex;
   align-items: center;
   /* max-width: 1600px; */
-  margin: 0.2em;
+  margin: 2em;
   border-bottom: 2px solid rgb(16, 210, 68);
 }
 .navbar h1 {
   color: rgb(36, 12, 214);
+  font-size: 60px;
 }
 .navbar .links {
   margin-left: auto;
+  font-size: 20px;
 }
 .navbar a {
   margin-left: 16px;
@@ -39,14 +41,14 @@
     font-size: 16px;
 }
 .page1 {
-  background: url(https://images.pexels.com/photos/53534/wild-orchid-orchid-blossom-bloom-53534.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)
+  background: url("../public/images/design0.png")
     no-repeat center;
   background-size: cover;
-  text-align: right;
-  padding: 60px;
+  height: max-content;
+  padding: 30px;
   overflow: hidden;
   height: 100vh;
-  color: white;
+  color: rgb(32, 26, 26);
 }
 
 

@@ -10,10 +10,20 @@ import { LogInForm } from './components/LogInForm';
 import FormUser from './components/FormUser';
 import FormHelper from './components/FormHelper';
 import BlogList from './components/BlogList';
-
+import { useState, useEffect } from "react";
+import { fetchHelperData } from "./fetch-data";
 
 
 function App() {
+  const [helperData, setHelperData] = useState();
+  const fetchData = async function () {
+    const data = await fetchHelperData();
+    setHelperData(data);
+  };
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   return (
     <>
     <BrowserRouter>
@@ -21,9 +31,9 @@ function App() {
         <Navbar />
         <div className="content">
           <Routes>
-            <Route exact path="/" element={<Home />} />
+            <Route exact path="/" element={<Home helperData={helperData} />} />
             <Route path="/about" element={<About/>} />
-            <Route path="/helper-profile:id" element={<Display />} />
+            <Route path="/helper-profile" element={<Display helperData={helperData}/>} />
             <Route path="/login" element={< LogInForm/>} />
             <Route path="/FormUser" element={< FormUser/>} />
             <Route path="/FormHelper" element={< FormHelper/>} />

@@ -3,9 +3,10 @@ import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import InputGroup from 'react-bootstrap/InputGroup';
-import { Container } from "react-bootstrap";
+import { Container, FormGroup } from "react-bootstrap";
 import { Controller, useForm } from "react-hook-form";
 import { addHelperData } from "../postHelperData"
+//import FormCheck from 'react-bootstrap/FormCheck'
  
 function FormHelper() {
   const {control,handleSubmit,formState: { errors },getValues} = useForm({
@@ -298,6 +299,50 @@ function FormHelper() {
                 />
       </Form.Group>
         </Row>
+       {/* <Row>
+            <Form.Group className="mb-3" >
+            <Form.label />
+            <Form.Check />
+            <FormCheck.Input 
+            inline
+            name="img1"
+            type="radio" 
+            label=<img alt="#" className="img-fluid" src="https://source.unsplash.com/640x426/?fitness"/>
+            id= "img1"
+          />
+          <FormCheck.Label
+            inline
+            name="img2"
+            type="radio" 
+            label=<img alt="#" className="img-fluid" src="https://source.unsplash.com/640x426/?people"/>
+            id= "img2"
+          />
+          <Form.Check
+            inline
+            name="img3"
+            type="radio" 
+            label=<img alt="#" className="img-fluid" src="https://source.unsplash.com/640x426/?fitness"/>
+            id= "img3"
+          />
+          </Form.Group>
+          <Row>
+            <FormCheck.Input for="imgB" type="radio" className="img-fluid"/> 
+            <FormCheck.Label id="imgB" ><img src="https://source.unsplash.com/640x426/?people" alt="brown male"/></FormCheck.Label>
+            <FormCheck.Input for="imgA" type="radio" className="img-fluid"/> 
+            <FormCheck.Label id="imgA" ><img src="https://source.unsplash.com/640x426/?fitnesse" alt="#"/></FormCheck.Label>
+            
+                </Row>
+                </Row>*/}
+          <Row>
+            <FormGroup>
+          <input type="radio" id="html" name="fav_language" value="HTML"/>
+  <label for="html">HTML</label><br/>
+  <input type="radio" id="css" name="fav_language" value="CSS"/>
+  <label for="css">CSS</label><br/>
+  <input type="radio" id="javascript" name="fav_language" value="JavaScript"/>
+  <label for="javascript">JavaScript</label>
+            </FormGroup>
+          </Row>           
         <Row>
             <Form.Group className="d-flex justify-content-center mb-4" >
             <Controller

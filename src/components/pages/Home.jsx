@@ -6,7 +6,7 @@ import { Link } from "react-router-dom"
 const Home = ({helperData}) => {
   return (
     <>
-    <div className='page1 d-flex justify-content-evenly'>
+    <div className='page1 d-flex flex-column mb-3 justify-content-end'>
       <div>
       <h1>We’ve been there.<br/>We know how it feels.</h1>
       <h4>Get matched with someone in our network that has

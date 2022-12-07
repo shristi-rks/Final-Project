@@ -1,21 +1,20 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Card from 'react-bootstrap/Card';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Button from 'react-bootstrap/Button';
 import { Container } from 'react-bootstrap'; 
+import Card from 'react-bootstrap/Card';
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+import { Link } from "react-router-dom"
+import Button from 'react-bootstrap/Button';
 import './Profile.css'
 
 
-const Profile = ({ helper }) => {
-  if (helper.publish === true) {
+const HelperSection = ({ helper }) => {
+  if (helper.publish === true && helper.id <= 19){
   return (
     <Container className='container d-flex justify-content-around'>
-      <Row xs={1} md={3} className="g-4">
+      <Row xs={1} md={4} className="g-4">
       <Col>
-      <Card border="primary" style={{ width: '18rem' }}>
-        <Card.Img height={"300px"}  variant="top"
+      <Card border="primary" height={"500px"} style={{ width: '18rem' }}>
+        <Card.Img height={"250px"}  variant="top"
         src="https://images.pexels.com/photos/14398103/pexels-photo-14398103.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
         alt="profile " />
         <Card.Header className="text-center"><Card.Title>{helper.userName}</Card.Title></Card.Header>
@@ -28,10 +27,7 @@ const Profile = ({ helper }) => {
                 <span>{helper.age}yrs</span> 
             </div>
         </div>
-          <Card.Text>
-            "{helper.bio}"
-          </Card.Text> 
-          <Link to="/bloglist"><Button type= "submit" variant="info">BOOK ME</Button></Link>
+        <Link to="/helper-profile"><Button  type= "submit" variant="info" size="sm">See more </Button></Link>
         </Card.Body>
         <Card.Footer>
             <div className="text-muted d-flex justify-content-between">
@@ -39,7 +35,7 @@ const Profile = ({ helper }) => {
                 <span>{helper.city} </span> Finland
               </div>
               <div className="item">
-                Price <span>{helper.price} </span> 
+                Price<span>{helper.price} </span> 
               </div>
               <div className="item">
                 <span>Reviews</span> Rating
@@ -53,4 +49,4 @@ const Profile = ({ helper }) => {
   )
 }
 }
-export default Profile; 
+export default HelperSection; 

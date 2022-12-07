@@ -1,22 +1,17 @@
 import React from "react";
-import { useState, useEffect } from "react";
-import { fetchHelperData } from "../fetch-data";
 import Profile from './Profile'
+import Row from 'react-bootstrap/Row'
 
 
-function Display() {
-  const [helperData, setHelperData] = useState();
-  const fetchData = async function () {
-    const data = await fetchHelperData();
-    setHelperData(data);
-  };
-  useEffect(() => {
-    fetchData();
-  }, []);
+
+function Display({helperData}) {
+  
   return (
     <div >
         <div className='d-flex justify-content-between'>
+        <Row xs={1} md={3} className="g-4">
           {helperData && helperData.data.helper_data.map(helper => <Profile helper = {helper} key={helper.id} /> )}
+        </Row>
         </div>
     </div>
   );

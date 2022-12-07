@@ -6,6 +6,7 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import { Container } from "react-bootstrap";
 import { Controller, useForm } from "react-hook-form";
 import { addHelperData } from "../postHelperData"
+//import FormCheck from 'react-bootstrap/FormCheck'
  
 function FormHelper() {
   const {control,handleSubmit,formState: { errors },getValues} = useForm({
@@ -39,6 +40,7 @@ function FormHelper() {
   };
 
   return (
+    
     <>
       <Container>
         <Form noValidate onSubmit={handleSubmit(submitForm)}  >
@@ -103,11 +105,12 @@ function FormHelper() {
                 render={({ field }) => (
                   <Form.Select aria-label="Default select example" {...field} type="text" placeholder="Age" isInvalid={errors.age}>
                   <option>Select your age</option>
-                  <option value="20-30">20-30</option>
+                  <option value="18-30">below 18</option>
+                  <option value="18-30">18-30</option>
                   <option value="30-40">30-40</option>
                   <option value="40-50">40-50</option>
                   <option value="50-60">50-60</option>
-                  <option value="60-70">60-70</option>
+                  <option value="60 and above">60 and above</option>
                 </Form.Select>
                 )}
               />
@@ -239,10 +242,10 @@ function FormHelper() {
                 render={({ field }) => (
                   <Form.Select aria-label="Default select example" {...field} type="text" placeholder="Price" isInvalid={errors.age}>
                   <option>Price per session</option>
-                  <option value="1">20</option>
-                  <option value="2">30</option>
-                  <option value="3">50</option>
-                  <option value="3">Donation</option>
+                  <option value="20">20</option>
+                  <option value="30">30</option>
+                  <option value="50">50</option>
+                  <option value="Donate">Donate</option>
                 </Form.Select>
                 )}
               />
@@ -297,7 +300,7 @@ function FormHelper() {
                 )}
                 />
       </Form.Group>
-        </Row>
+        </Row>      
         <Row>
             <Form.Group className="d-flex justify-content-center mb-4" >
             <Controller

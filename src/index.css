@@ -5,20 +5,23 @@
   font-family: 'Lato', sans-serif;
   padding: 0.1;
   font-weight: solid;
+  max-width: 1600px;
 }
 .navbar {
   padding: 20px;
   display: flex;
   align-items: center;
-  /* max-width: 1600px; */
-  margin: 0.2em;
+  /* max-width: auto;  */
+  margin: 2em;
   border-bottom: 2px solid rgb(16, 210, 68);
 }
 .navbar h1 {
   color: rgb(36, 12, 214);
+  font-size: 60px;
 }
 .navbar .links {
   margin-left: auto;
+  font-size: 20px;
 }
 .navbar a {
   margin-left: 16px;
@@ -28,18 +31,20 @@
 .navbar a:hover {
   color: aqua;
 }
-.btn Button{
-    background-color: white;
-    border: none;
-    color: black;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
+.content .btn {
+  
+  border: 1px solid black;
+  color: #000;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 16px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+
 }
 .page1 {
-  background: url(https://images.pexels.com/photos/53534/wild-orchid-orchid-blossom-bloom-53534.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)
+  background: url(https://images.pexels.com/photos/3013120/pexels-photo-3013120.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)
     no-repeat center;
   background-size: cover;
   text-align: right;
@@ -49,7 +54,22 @@
   color: white;
 }
 
-
+.page2 {
+  background: url('../About\ layout.png')
+    no-repeat center;
+  background-size: cover;
+  text-align: center;
+  padding: 60px;
+  overflow: hidden;
+  height: 100vh;
+  color:black;
+}
+.page2 h1{
+  margin-bottom:40px ;
+}
+.page2 h4{
+margin-top: 150px;
+}
 
 .header {
   background: #5f9ad1;

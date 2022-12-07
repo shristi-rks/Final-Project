@@ -1,8 +1,11 @@
 
+import { Link } from "react-router-dom";
+
 const Button = () => {
     return (
-    <div className="btn">    
-    <button><a href = './FormHelper'>Register as a Helper</a></button>  
+    <div >    
+
+    <button className="btn" ><Link  to= './FormHelper'>Register as a Helper</Link></button>  
     </div>
     )
 }
